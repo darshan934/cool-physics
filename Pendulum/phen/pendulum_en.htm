@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<title>Simple Pendulum</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ph/page2.css" type="text/css">
+<style>
+div#total { width: 820px; height: 420px; }
+div#canvas { width: 560px; height: 420px; }
+div#panel { left: 560px; width: 260px; height: 420px; } 
+button { left: 10px; width: 240px; }
+input[type="text"] { left: 130px; width: 80px; }
+.pos1 { left: 10px; }
+.pos3 { left: 225px; }
+</style>
+<script src="pendulum.js"></script>
+<script src="pendulum_en.js"></script>
+<script src="page_phen.js"></script>
+<meta name="description" content="Simple Pendulum">
+<meta name="author" content="Darshan Gada">
+</head>
+
+<body>
+
+<h1>Simple Pendulum</h1>
+
+<p>This HTML5 app demonstrates the variation of elongation, velocity, tangential acceleration, force and energy during the oscillation of a 
+   pendulum (assumed with no friction).</p>
+
+<p>The &quot;Reset&quot; button brings the body of pendulum to its initial position. You can start or stop and continue the simulation with the 
+other button. If you choose the option <span class="nobr">&quot;Slow motion&quot;,</span> the movement will be ten times slower. 
+The length of the pendulum, the gravitational acceleration, the mass and the amplitude of the oscillation can be changed within certain limits. 
+In order to select another physical size you have to click on the appropriate one of the five radio buttons.</p>
+
+<p>The dependence of the oscillation period upon the amplitude was neglected in the calculations.</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=540 height=420>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 10px;"><button id="bu1" style="background-color: #00ffff;"></button></div>
+    <div style="top: 50px;"><button id="bu2" style="background-color: #ffff00;"></button></div>
+    <div style="top: 95px;"><input type="checkbox" id="cbSlow" name="cbSlow" value=""><label for="cbSlow" id="lbSlow"></label></div>
+    <div style="top: 130px;"><span class="pos1" id="ipLa"></span><input type="text" id="ipLb"><span class="pos3" id="ipLc"></span></div>
+    <div style="top: 155px;"><span class="pos1" id="ipGx"></span></div>
+    <div style="top: 170px;"><span class="pos1" id="ipGa"></span><input type="text" id="ipGb"><span class="pos3" id="ipGc"></span></div>
+    <div style="top: 200px;"><span class="pos1" id="ipMa"></span><input type="text" id="ipMb"><span class="pos3" id="ipMc"></span></div>
+    <div style="top: 230px;"><span class="pos1" id="ipAa"></span><input type="text" id="ipAb"><span class="pos3" id="ipAc"></span></div>
+    <div style="top: 255px;"><input type="radio" id="rbY" name="bg" value=""><label id="lbY" for="rbY" style="color: #ff0000;"></label></div>
+    <div style="top: 280px;"><input type="radio" id="rbV" name="bg" value=""><label id="lbV" for="rbV" style="color: #ff00ff;"></label></div>
+    <div style="top: 305px;"><input type="radio" id="rbA" name="bg" value=""><label id="lbA" for="rbA" style="color: #0000ff;"></label></div>
+    <div style="top: 330px;"><input type="radio" id="rbF" name="bg" value=""><label id="lbF" for="rbF" style="color: #008020;"></label></div>
+    <div style="top: 355px;"><input type="radio" id="rbE" name="bg" value=""><label id="lbE" for="rbE" style="color: #000000;"></label></div>
+    <div style="top: 390px;"><span class="pos1" id="author"></span></div>
+  </div>
+</div>
+
+<script>endPage("pendulum",21,5,1998,20,9,2014);</script>
+
+
+</body>
+</html>
